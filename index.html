@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VHP Krishnanagar Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FFA552 100%);
+      min-height: 100vh;
+    }
+    .font-playfair { font-family: 'Playfair Display', serif; }
+    .btn-gradient {
+      background: linear-gradient(135deg, #FF4500 0%, #FF6347 50%, #FF7F50 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #FF6347 0%, #FF7F50 50%, #FFA07A 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+    }
+    .section-header {
+      background: linear-gradient(135deg, #D84315 0%, #FF5722 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .section-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .section-header:hover::before {
+      left: 100%;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea, select {
+      transition: all 0.3s ease;
+      border: 2px solid #E0E0E0;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: #FF5722;
+      box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
+      transform: translateY(-1px);
+    }
+    .checkbox-custom:checked {
+      background-color: #FF5722;
+      border-color: #FF5722;
+    }
+    .radio-custom:checked {
+      background-color: #FF5722;
+      border-color: #FF5722;
+    }
+    .card-shadow {
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+    .logo-glow {
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); }
+      50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center py-12 px-4">
+  <div class="bg-white p-10 rounded-2xl card-shadow w-full max-w-5xl">
+
+    <!-- Header Section -->
+    <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8 rounded-2xl mb-10 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <div class="absolute top-4 left-4 w-20 h-20 border-4 border-white rounded-full"></div>
+        <div class="absolute bottom-4 right-4 w-32 h-32 border-4 border-white rounded-full"></div>
+      </div>
+      <div class="relative z-10">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/69/Vishva_Hindu_Parishad_logo.svg/1200px-Vishva_Hindu_Parishad_logo.svg.png" alt="VHP Logo" class="h-32 w-32 object-contain mx-auto mb-6 bg-white p-3 rounded-full logo-glow">
+        <h1 class="text-4xl font-bold font-playfair mb-3">Vishwa Hindu Parishad</h1>
+        <p class="text-2xl font-semibold mb-2">Krishnanagar Chapter</p>
+        <div class="w-32 h-1 bg-white mx-auto rounded-full mt-4"></div>
+        <p class="text-lg mt-4 font-medium">Member Registration Form</p>
+      </div>
+    </div>
+
+    <p class="text-center text-gray-600 mb-8 text-base">
+      <i class="fas fa-info-circle text-orange-500 mr-2"></i>
+      Fields marked with <span class="text-red-500 font-bold">*</span> are mandatory
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-8">
+
+      <!-- Personal Information -->
+      <div>
+        <div class="section-header text-white px-6 py-4 rounded-t-xl font-bold text-xl flex items-center">
+          <i class="fas fa-user mr-3"></i>
+          Personal Information
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border-2 border-gray-200 rounded-b-xl bg-gray-50">
+
+          <!-- Name -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-user-circle text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Full Name
+            </label>
+            <input type="text" name="name" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter your full name" required>
+          </div>
+
+          <!-- Gender -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-venus-mars text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Gender
+            </label>
+            <div class="flex space-x-6 mt-3">
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="gender" value="Male" class="radio-custom w-5 h-5 text-orange-600 mr-2" required> 
+                <span class="font-medium">Male</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="gender" value="Female" class="radio-custom w-5 h-5 text-orange-600 mr-2" required> 
+                <span class="font-medium">Female</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Age -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-birthday-cake text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Age
+            </label>
+            <input type="number" name="age" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter your age" required min="1" max="120">
+          </div>
+
+          <!-- Profession -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-briefcase text-orange-500 mr-2"></i>
+              Profession / Occupation
+            </label>
+            <input type="text" name="profession" class="block w-full px-4 py-3 rounded-lg" placeholder="e.g., Teacher, Student, Business">
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-phone text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Phone Number
+            </label>
+            <input type="tel" name="phone" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}" maxlength="10">
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-envelope text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Email Address
+            </label>
+            <input type="email" name="email" class="block w-full px-4 py-3 rounded-lg" placeholder="your.email@example.com" required>
+          </div>
+
+          <!-- Education -->
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-graduation-cap text-orange-500 mr-2"></i>
+              Educational Qualification
+            </label>
+            <input type="text" name="education" class="block w-full px-4 py-3 rounded-lg" placeholder="e.g., Graduate, Post Graduate, 12th Pass, etc.">
+          </div>
+
+          <!-- Why Join -->
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-comments text-orange-500 mr-2"></i>
+              Why do you want to join VHP?
+            </label>
+            <textarea name="whyJoin" rows="4" class="block w-full px-4 py-3 rounded-lg" placeholder="Share your thoughts and motivation for joining..."></textarea>
+          </div>
+
+          <!-- Areas of Interest -->
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-3">
+              <i class="fas fa-heart text-orange-500 mr-2"></i>
+              Areas of Interest
+            </label>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Social Work" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Social Work</span>
+              </label>
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Youth Activities" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Youth Activities</span>
+              </label>
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Cultural Programs" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Cultural Programs</span>
+              </label>
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Religious Activities" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Religious Activities</span>
+              </label>
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Education & Training" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Education & Training</span>
+              </label>
+              <label class="flex items-center cursor-pointer bg-white p-3 rounded-lg hover:bg-orange-50 transition">
+                <input type="checkbox" name="interests[]" value="Community Service" class="checkbox-custom w-5 h-5 text-orange-600 mr-3 rounded"> 
+                <span class="font-medium">Community Service</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Address Information -->
+      <div>
+        <div class="section-header text-white px-6 py-4 rounded-t-xl font-bold text-xl flex items-center">
+          <i class="fas fa-map-marker-alt mr-3"></i>
+          Address Information
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 border-2 border-gray-200 rounded-b-xl bg-gray-50">
+
+          <!-- City -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-city text-orange-500 mr-2"></i>
+              City
+            </label>
+            <input type="text" value="Krishnanagar" disabled class="block w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-600 font-medium">
+          </div>
+
+          <!-- District -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-map text-orange-500 mr-2"></i>
+              District
+            </label>
+            <input type="text" value="Nadia" disabled class="block w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-600 font-medium">
+          </div>
+
+          <!-- Village/Area -->
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-home text-orange-500 mr-2"></i>
+              Village / Area / Locality
+            </label>
+            <input type="text" name="villageArea" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter your village, area or locality name">
+          </div>
+
+          <!-- Current Address -->
+          <div class="md:col-span-2">
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-location-arrow text-orange-500 mr-2"></i>
+              <span class="text-red-500">*</span>Complete Address
+            </label>
+            <textarea name="currentAddress" rows="3" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter your complete residential address..." required></textarea>
+          </div>
+
+          <!-- PIN Code -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-map-pin text-orange-500 mr-2"></i>
+              PIN Code
+            </label>
+            <input type="text" name="pinCode" class="block w-full px-4 py-3 rounded-lg" placeholder="Enter 6-digit PIN code" pattern="[0-9]{6}" maxlength="6">
+          </div>
+
+          <!-- State -->
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-2">
+              <i class="fas fa-flag text-orange-500 mr-2"></i>
+              State
+            </label>
+            <input type="text" value="West Bengal" disabled class="block w-full px-4 py-3 rounded-lg bg-gray-200 text-gray-600 font-medium">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center mt-10">
+        <button type="submit" class="py-4 px-12 rounded-xl text-white btn-gradient font-bold text-lg flex items-center">
+          <i class="fas fa-paper-plane mr-3"></i>
+          Submit Registration
+        </button>
+      </div>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="text-center mt-10 pt-8 border-t-2 border-gray-200">
+      <p class="text-gray-600 font-medium">© 2025 Vishwa Hindu Parishad - Krishnanagar</p>
+      <p class="text-gray-500 text-sm mt-2">Nadia District, West Bengal</p>
+      <p class="text-gray-500 text-sm mt-1">
+        <i class="fas fa-envelope mr-2 text-orange-500"></i>
+        For any queries, please contact us
+      </p>
+    </div>
+  </div>
+</body>
+</html>
